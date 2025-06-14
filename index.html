@@ -12,45 +12,9 @@
     <div class="container">
         <header>
             <h1>Gestión de Estudiantes</h1>
-            <p>Proyecto de investigación con Supabase</p>
+            <p>Proyecto de investigación con Supabase </p>
+            <span class="parrafo">Base de datos - Grupo 16</span>
         </header>
-
-        <div class="card">
-            <h2>Formulario de Estudiante</h2>
-            <form id="studentForm">
-                <div class="form-group">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
-                <div class="form-group">
-                    <label for="apellido">Apellido:</label>
-                    <input type="text" id="apellido" name="apellido" required>
-                </div>
-                <div class="form-group">
-                    <label for="edad">Edad:</label>
-                    <input type="number" id="edad" name="edad" min="18" max="100" required>
-                </div>
-                <div class="form-group">
-                    <label for="carrera">Carrera:</label>
-                    <select id="carrera" name="carrera" required>
-                        <option value="">Seleccione una carrera</option>
-                        <option value="Informática">Informática</option>
-                        <option value="Ingeniería">Ingeniería</option>
-                        <option value="Medicina">Medicina</option>
-                        <option value="Derecho">Derecho</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="promedio">Promedio:</label>
-                    <input type="number" id="promedio" name="promedio" step="0.01" min="0" max="10" required>
-                </div>
-                <div class="form-actions">
-                    <button type="submit" id="saveBtn">Guardar</button>
-                    <button type="button" id="updateBtn" disabled>Actualizar</button>
-                    <button type="reset" id="resetBtn">Limpiar</button>
-                </div>
-            </form>
-        </div>
 
         <div class="card">
             <h2>Lista de Estudiantes</h2>
@@ -64,7 +28,6 @@
                             <th>Edad</th>
                             <th>Carrera</th>
                             <th>Promedio</th>
-                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody id="studentsTableBody">
@@ -73,22 +36,9 @@
                 </table>
             </div>
         </div>
-
-        <div class="card">
-            <h2>Consultas</h2>
-            <div class="query-section">
-                <button id="queryHighAvgBtn">Estudiantes con promedio > 8</button>
-                <button id="queryByCareerBtn">Agrupar por carrera</button>
-                <button id="queryJoinBtn">Estudiantes con cursos (JOIN)</button>
-            </div>
-            <div id="queryResults" class="query-results">
-                <!-- Los resultados de consultas se mostrarán aquí -->
-            </div>
-        </div>
     </div>
-
     <footer>
-        <p>Proyecto de Investigación con Supabase - 2023</p>
+        <p>Proyecto de Investigación con Supabase - 2025</p>
     </footer>
 
     <script src="app.js" type="module"></script>
