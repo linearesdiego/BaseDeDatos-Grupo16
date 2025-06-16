@@ -13,7 +13,7 @@ async function fetchStudents() {
     const { data, error } = await supabase
       .from("estudiantes")
       .select("*")
-      .order("id", { ascending: true });
+      .order("estudianteid", { ascending: true });
 
     if (error) throw error;
 
