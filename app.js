@@ -38,7 +38,7 @@ function renderStudentsTable(students) {
   students.forEach((student) => {
     const row = document.createElement("tr");
     row.innerHTML = `
-            <td>${student.id}</td>
+            <td>${student.estudianteid}</td>
             <td>${student.nombre}</td>
             <td>${student.apellido}</td>
             <td>${student.edad}</td>
