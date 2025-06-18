@@ -2,7 +2,7 @@
 
 -- Crear tabla de estudiantes
 CREATE TABLE IF NOT EXISTS estudiantes (
-    id SERIAL PRIMARY KEY,
+    estudianteid SERIAL PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
     apellido VARCHAR(100) NOT NULL,
     edad INTEGER CHECK (edad >= 18 AND edad <= 100),
@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS cursos (
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 
--- Crear tabla de relacióo (muchos a n estudiante-cursmuchos)
+-- Crear tabla de relación (muchos a n estudiante-cursmuchos)
 CREATE TABLE IF NOT EXISTS estudiante_curso (
     id SERIAL PRIMARY KEY,
     estudiante_id INTEGER REFERENCES estudiantes(id) ON DELETE CASCADE,

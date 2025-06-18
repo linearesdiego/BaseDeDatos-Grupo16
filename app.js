@@ -1,9 +1,7 @@
 import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
+import { API_KEY, SUPABASE_URL } from "./config.js";
 
-const supabase = createClient(
-  "https://apxgknwbpfnjllcdauig.supabase.co",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFweGdrbndicGZuamxsY2RhdWlnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY0Njc3NjAsImV4cCI6MjA2MjA0Mzc2MH0.18koBi7-s_RvPF7oDUu1v0480t6lRTItM1GzuvNRNNA"
-);
+const supabase = createClient(SUPABASE_URL, API_KEY);
 
 document.addEventListener("DOMContentLoaded", fetchStudents);
 
