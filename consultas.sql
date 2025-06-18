@@ -2,7 +2,7 @@
 
 -- Crear tabla de estudiantes
 CREATE TABLE IF NOT EXISTS estudiantes (
-    estudianteid SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
     apellido VARCHAR(100) NOT NULL,
     edad INTEGER CHECK (edad >= 18 AND edad <= 100),
