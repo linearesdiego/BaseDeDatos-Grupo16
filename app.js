@@ -11,7 +11,7 @@ async function fetchStudents() {
     const { data, error } = await supabase
       .from("estudiantes")
       .select("*")
-      .order("estudianteid", { ascending: true });
+      .order("id", { ascending: true });
 
     if (error) throw error;
 
@@ -36,7 +36,7 @@ function renderStudentsTable(students) {
   students.forEach((student) => {
     const row = document.createElement("tr");
     row.innerHTML = `
-            <td>${student.estudianteid}</td>
+            <td>${student.id}</td>
             <td>${student.nombre}</td>
             <td>${student.apellido}</td>
             <td>${student.edad}</td>
