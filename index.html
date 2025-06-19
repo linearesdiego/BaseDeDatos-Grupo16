@@ -9,35 +9,42 @@
 </head>
 
 <body>
+    <div class="container-logo">
+        <div class="logo">
+            <img src="./logo.webp" alt="">
+
+        </div>
+    </div>
     <div class="container">
         <header>
+
             <h1>Gestión de Estudiantes</h1>
             <p>Proyecto de investigación con Supabase </p>
             <span class="parrafo">Base de datos - Grupo 16</span>
         </header>
 
-        
+
         <div class="card">
             <h2>Lista de Estudiantes</h2>
             <div class="table-container">
-                <table id="cursosTable">
+                <table id="studentsTable">
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Nombre Curso</th>
+                            <th>Nombre</th>
                             <th>Creditos</th>
                             <th>Edad</th>
                             <th>Carrera</th>
                             <th>Promedio</th>
                         </tr>
                     </thead>
-                    <tbody id="cursosTableBody">
+                    <tbody id="studentsTableBody">
                         <!-- Los datos se cargarán dinámicamente -->
                     </tbody>
                 </table>
             </div>
         </div>
-        
+
         <div class="card">
             <h2>Lista de Cursos</h2>
             <div class="table-container">
@@ -55,15 +62,15 @@
                 </table>
             </div>
         </div>
-        
+
         <div class="card">
             <h2>Lista de Estudiantes-Cursos</h2>
             <div class="table-container">
                 <table id="students_cursosTable">
                     <thead>
                         <tr>
-                            <th>ID_estudiante</th>
-                            <th>ID_curso</th>
+                            <th>Estudiante id</th>
+                            <th>Curso id</th>
                             <th>Fecha de Inscripción</th>
                         </tr>
                     </thead>

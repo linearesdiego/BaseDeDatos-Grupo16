@@ -40,14 +40,11 @@ async function fetchCursos() {
 
 async function fetchStudents_cursos() {
   try {
-    const { data, error } = await supabase
-      .from("estudiantes_cursos")
-      .select("*")
-      .order("id", { ascending: true });
+    const { data, error } = await supabase.from("estudiante_curso").select("*");
 
     if (error) throw error;
 
-    renderStudentsTable(data);
+    renderEstudiantesCursosTable(data);
   } catch (error) {
     console.error("Error al cargar la relacion:", error);
   }
@@ -86,7 +83,7 @@ function renderCursosTable(cursos) {
   if (cursos.length === 0) {
     const row = document.createElement("tr");
     row.innerHTML =
-      '<td colspan="7" style="text-align: center;">No hay estudiantes registrados</td>';
+      '<td colspan="7" style="text-align: center;">No hay cursos registrados</td>';
     cursosTableBody.appendChild(row);
     return;
   }
@@ -96,37 +93,32 @@ function renderCursosTable(cursos) {
     row.innerHTML = `
             <td>${cursos.id}</td>
             <td>${cursos.nombre_curso}</td>
-            <td>${cursos.credito}</td>
+            <td>${cursos.creditos}</td>
             
         `;
     cursosTableBody.appendChild(row);
   });
 }
 
-/*
-function renderStudentsTable(students) {
-  studentsTableBody.innerHTML = "";
+function renderEstudiantesCursosTable(estudiantes_cursos) {
+  students_cursosTableBody.innerHTML = "";
 
-  if (students.length === 0) {
+  if (estudiantes_cursos.length === 0) {
     const row = document.createElement("tr");
     row.innerHTML =
-      '<td colspan="7" style="text-align: center;">No hay estudiantes registrados</td>';
-    studentsTableBody.appendChild(row);
+      '<td colspan="7" style="text-align: center;">No hay datos</td>';
+    students_cursosTableBody.appendChild(row);
     return;
   }
 
-  students.forEach((student) => {
+  estudiantes_cursos.forEach((estudiante) => {
     const row = document.createElement("tr");
-    row.innerHTML = `
-            <td>${student.id}</td>
-            <td>${student.nombre}</td>
-            <td>${student.apellido}</td>
-            <td>${student.edad}</td>
-            <td>${student.carrera}</td>
-            <td>${student.promedio}</td>
-            
+    row.innerHTML = `     
+            <td>${estudiante.estudiante_id}</td>
+            <td>${estudiante.curso_id}</td>
+            <td>${estudiante.fecha_inscripcion.substring(0, 10)}</td>
+           
         `;
-    studentsTableBody.appendChild(row);
+    students_cursosTableBody.appendChild(row);
   });
 }
-*/

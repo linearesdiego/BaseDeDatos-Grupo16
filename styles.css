@@ -97,3 +97,18 @@ footer {
   color: var(--dark-color);
   font-weight: bold;
 }
+
+.container-logo {
+  position: relative;
+}
+
+.logo {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+}
+.logo img {
+  width: 70px;
+  height: auto;
+  border-radius: 50%;
+}
