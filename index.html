@@ -16,21 +16,58 @@
             <span class="parrafo">Base de datos - Grupo 16</span>
         </header>
 
+        
         <div class="card">
             <h2>Lista de Estudiantes</h2>
             <div class="table-container">
-                <table id="studentsTable">
+                <table id="cursosTable">
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
+                            <th>Nombre Curso</th>
+                            <th>Creditos</th>
                             <th>Edad</th>
                             <th>Carrera</th>
                             <th>Promedio</th>
                         </tr>
                     </thead>
-                    <tbody id="studentsTableBody">
+                    <tbody id="cursosTableBody">
+                        <!-- Los datos se cargarán dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Lista de Cursos</h2>
+            <div class="table-container">
+                <table id="cursosTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre Curso</th>
+                            <th>Creditos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cursosTableBody">
+                        <!-- Los datos se cargarán dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Lista de Estudiantes-Cursos</h2>
+            <div class="table-container">
+                <table id="students_cursosTable">
+                    <thead>
+                        <tr>
+                            <th>ID_estudiante</th>
+                            <th>ID_curso</th>
+                            <th>Fecha de Inscripción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="students_cursosTableBody">
                         <!-- Los datos se cargarán dinámicamente -->
                     </tbody>
                 </table>
